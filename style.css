@@ -3,18 +3,27 @@
     src: url(fonts/Norse-Bold.otf);
 }
 
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+
 body {
     display: flex;
     box-sizing: border-box;
     height: 100vh;
-    height: 100vw;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }
 
 .left{
     background-image: url(img/halie-west-25xggax4bSA-unsplash.jpg);
-    background-size: contain;
+    background-size: cover;
     width: 40%;
     height: 100%;
 }
@@ -49,8 +58,78 @@ img {
 .right {
     width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-fieldset {
-    height: 20rem;
+.right-middle {
+    flex: 1;
+    padding: 3rem;
+    box-shadow: 5px 5px 15px gray;
+}
+
+.input-section {
+    display: flex;
+    justify-content:flex-start;
+}
+
+.input-section div {
+    flex: 1;
+}
+
+.right-up, .right-down {
+padding: 3rem;
+flex: 1;
+background-color: rgba(255, 255, 255, 0.827);
+}
+
+.right-up {
+   justify-content: flex-end;
+}
+
+label {
+    display: block;
+    color: rgba(0, 0, 0, 0.563);
+    font-size: 0.7rem;
+}
+
+input {
+    border-color: #E5E7EB;
+    width: 15rem;
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    border: solid 2px #E5E7EB;
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight:600;
+}
+
+button:hover{
+    box-shadow: 5px 5px 15px gray;
+    cursor: pointer;
+}
+
+a {
+    color: #596D48 ;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input:focus {
+    box-shadow: 1px 1px 15px gray;
+}
+
+input:invalid {
+    border-color: rgba(255, 0, 0, 0.639);
+    
 }
